@@ -1,0 +1,76 @@
+.nft {
+    background: #000;
+    border-radius: 4px;
+    color: #fff;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    align-items: center;
+    transition: .15s all ease-in-out;
+    text-decoration: none;
+}
+
+.nft:hover,
+.nft:focus,
+.nft:active {
+    transform: translateY(3px);
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.nft .nft-image {
+    border-radius: 4px;
+}
+
+.nft .nft-image img { 
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.nft .info {
+    padding: 10px;
+}
+
+.nft .info .creator {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    text-align: left;
+    font-size: 12px;
+}
+
+.nft .info .creator a { 
+    align-items: center;
+}
+
+.nft .info .creator .hide { 
+    text-align: right;
+    font-size: 12px;
+    align-self: center;
+    color: rgba(255, 0, 0, .65);
+    font-weight: 700; 
+}
+
+.nft .info .creator .hide:hover,
+.nft .info .creator .hide:active,
+.nft .info .creator .hide:focus { 
+    color: red;
+    cursor: pointer;
+}
+
+.nft a {
+    color: #fff;
+    text-decoration: none !important;
+    display: flex;
+}
+
+.nft .info span {
+    color: rgba(255, 255, 255, .65);
+    font-weight: 700;
+}
+
+.nft .info .auction,
+.nft .info .buy-now {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    margin-top: 10px;
+}
+
