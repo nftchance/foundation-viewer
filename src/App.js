@@ -126,12 +126,13 @@ function App() {
 					})
 
 					setStats(_stats);
-					console.log(stats)
 				})
 		}
 
 		getStats();
 	}, [filterOptions, page, sort])
+
+	console.log(stats)
 
 	useEffect(() => {
 		const getNFTs = () => {
