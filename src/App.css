@@ -173,3 +173,44 @@ input {
   border-radius: 4px;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 10px;
+    margin-top: 20px;
+  }
+
+  .container p {
+    max-width: 100%;
+  }
+
+  .toolbar {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    padding: 10px;
+  }
+
+  .filter {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / span 2;
+    row-gap: 8px;
+  }
+
+  .sort {
+    margin-left: 0;
+  }
+
+  .keyword-exclusion {
+    grid-template-columns: 1fr;
+    grid-column: 1 / span 2;
+    row-gap: 8px;
+  }
+
+  .keyword-exclusion>.keywords {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  .nfts {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

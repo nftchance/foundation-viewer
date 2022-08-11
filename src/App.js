@@ -249,7 +249,7 @@ function App() {
 									onClick={() => handleFilterChange(option)}
 									className={filter === option ? 'active' : ''}
 								>
-									{option.replace("_", " ")} {stats[option] ? `(${stats[option]})` : ''}
+									{option.replace("_", " ")}
 								</button>
 							)
 						})}
