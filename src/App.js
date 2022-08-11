@@ -42,6 +42,7 @@ function App() {
 
 	const [stats, setStats] = useState({})
 
+
 	const [filter, setFilter] = useState('default');
 	const [sort, setSort] = useState(sort_keys[0][1]);
 
@@ -125,6 +126,7 @@ function App() {
 					})
 
 					setStats(_stats);
+					console.log(stats)
 				})
 		}
 
