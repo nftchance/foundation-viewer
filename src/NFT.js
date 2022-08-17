@@ -32,7 +32,7 @@ const NFT = ({ nft, handleBlock }) => {
     }, [timeElapsed, nft?.auction])
 
     return (
-        <a href={`https://foundation.app/@${nft.creator.username}/${nft.collection.slug}/${nft.tokenId}`} target="_blank" rel="noreferrer">
+        <a href={`https://foundation.app/@${nft.creator.username}/${nft.collection.slug}/${nft.tokenId}?ref=0xa7C8B34bca69a047c5EB4438e90b3F4AB9E8450F`} target="_blank" rel="noreferrer">
             <div className="nft">
                 <div className="nft-image">
                     <LazyLoadComponent id={nft.id}>
