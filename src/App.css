@@ -196,6 +196,14 @@ input {
     max-width: 100%;
   }
 
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-featured {
+    margin-block: 20px;
+  }
+
   .toolbar {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto;
