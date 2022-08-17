@@ -11,10 +11,6 @@ const NFT = ({ nft, handleBlock }) => {
         window.open(url, '_blank', 'noopener,noreferrer');
     };
 
-    const hideArtist = (artist) => {
-        console.log('hidden')
-    }
-
     const [endsIn, setEndsIn] = useState(0);
 
     const [video, setVideo] = useState(false);
