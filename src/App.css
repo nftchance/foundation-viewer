@@ -6,8 +6,10 @@
 .hero {
   min-height: 15vh;
   display: grid;
+  grid-template-columns: 8fr 4fr;
   align-content: center;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .hero h1 {
@@ -16,6 +18,10 @@
 
 .hero p {
   max-width: 45%;
+}
+
+.hero-featured { 
+  margin-block: 40px;
 }
 
 .toolbar {
@@ -57,7 +63,8 @@
   margin-top: 40px;
 }
 
-.nfts a {
+.nfts a,
+a {
   text-decoration: none;
 }
 
@@ -124,6 +131,11 @@ button.keyword:hover,
 button.keyword:active,
 button.keyword:focus {
   background: rgba(255, 0, 0, 1);
+  color: #fff;
+}
+
+button.secondary {
+  background: #000;
   color: #fff;
 }
 

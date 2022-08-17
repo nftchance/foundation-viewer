@@ -5,9 +5,14 @@ import { useBottomScrollListener } from 'react-bottom-scroll-listener';
 
 import './App.css';
 
+// import logo
+import logo from './images/logo.png';
+
 import NFT from './NFT';
 
 function App() {
+	const [featured, setFeatured] = useState(null);
+
 	const [nftsQueried, setNftsQueried] = useState([]);
 	const [nfts, setNFTs] = useState([]);
 
@@ -122,6 +127,10 @@ function App() {
 				.then(responses => {
 					let _stats = {};
 					responses.forEach((response, index) => {
+						if(index === 3) {
+							setFeatured(response.hits[0])
+							console.log(filterOptions[index])
+						}
 						_stats[filterOptions[index]] = response.nbHits;
 					})
 
@@ -131,8 +140,6 @@ function App() {
 
 		getStats();
 	}, [filterOptions, page, sort])
-
-	console.log(stats)
 
 	useEffect(() => {
 		const getNFTs = () => {
@@ -235,9 +242,33 @@ function App() {
 
 	return (
 		<div className="container">
+			{/* navbar */}
+			<div className="navbar">
+				<div className="navbar-left">
+					<img src={logo} alt="logo" style={{
+						width: 50,
+						marginTop: 20
+					}} />
+				</div>
+			</div>
+
+			<hr style={{ marginBottom: 20 }} />
+
 			<div className="hero">
-				<h1>Browse Foundation the way it was intended.</h1>
-				<p>Cut out all the bullshit and find the beautiful (or ugly) pieces of art that you're looking for. We don't judge here.</p>
+				<div className="hero-text">
+					<h1>Browse Foundation the way it was intended.</h1>
+					<p>Cut out all the bullshit and find the beautiful (or ugly) pieces of art that you're looking for. We don't judge here.</p>
+
+					{/* <div style={{
+						marginTop: 40,
+					}}>
+						<button className="secondary">Submit to be featured</button>
+					</div> */}
+				</div>
+
+				<div className="hero-featured">
+					{nfts.length > 1 && <NFT nft={featured} />}
+				</div>
 			</div>
 
 			<div className={`sticky-wrapper${isSticky ? ' sticky' : ''}`} ref={ref}>
